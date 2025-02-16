@@ -1,0 +1,11 @@
+(ocamllex
+ (modules lexer))
+(menhir
+ (modules parser))
+(executable
+ (name expr2json)
+ (promote (until-clean))
+ (modules lexer parser ast expr2json)
+ (libraries yojson)
+ (flags ()))
+  
